@@ -1,8 +1,4 @@
 import styles from './Order.module.css';
-
-import './count.css';
-import './goods.css';
-import './order.css';
 import OrderGoods from '../OrderGoods/OrderGoods';
 import classNames from 'classnames';
 

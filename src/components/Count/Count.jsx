@@ -14,7 +14,7 @@ const Count = (props) => {
     };
 
     return (
-        <div className="count">
+        <div className={styles.count}>
             <button className={styles.count__minus} onClick={decrementCount} disabled={count === 1}>-</button>
             <p className={styles.count__amount}>{count}</p>
             <button className={styles.count__plus} onClick={incrementCount}>+</button>
