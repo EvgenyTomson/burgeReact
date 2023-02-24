@@ -2,9 +2,6 @@ import Container from '../Container/Container';
 import Order from '../Order/Order';
 import styles from './Catalog.module.css';
 import CatalogProduct from '../CatalogProduct/CatalogProduct';
-
-import './catalog.css';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { productRequestAsync } from '../../store/product/productSlice';
@@ -33,16 +30,17 @@ const Catalog = () => {
             <h2 className={styles.catalog__title}>{category[activeCategory]?.rus}</h2>
   
             <div className={styles.catalog__wrap_list}>
-              <ul className={styles.catalog__list}>
-                {isAnyProducts
-                  ? products.map((good) => (
+            {isAnyProducts
+              ? (<ul className={styles.catalog__list}>
+                
+                  {products.map((good) => (
                       <li className={styles.catalog__item} key={good.id}>
                         <CatalogProduct item={good}/>
                       </li> 
-                  ))
-                  : 'К сожалению товаров данной категории нет'
-                }
-              </ul>
+                  ))}                  
+              </ul>)
+              : <p className={styles.emptyProducts}>К сожалению товаров данной категории нет</p>
+            }
             </div>
           </div>
         </Container>

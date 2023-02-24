@@ -10,7 +10,7 @@ const CatalogProduct = ({item}) => {
         <article className={styles.product}>
             <img src={`${API_URI}/${item.image}`} alt={item.title} className={styles.product__image} />
 
-            <p className={styles.product__price}>{item.price}<span className="currency">₽</span></p>
+            <p className={styles.product__price}>{item.price}<span className="currency">&nbsp;₽</span></p>
 
             <h3 className={styles.product__title}>
             {/* <button className={styles.product__detail}>Мясная бомба</button> */}
