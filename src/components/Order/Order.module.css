@@ -7,7 +7,7 @@
     left: 0;
     top: 0;
     right: 0;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
     border-radius: 12px;
     padding: 16px 10px;
@@ -52,7 +52,7 @@
     line-height: 14px;
     width: 32px;
     height: 16px;
-    background: #F2F2F3;
+    background-color: #F2F2F3;
     border-radius: 6px;
   }
   
@@ -99,13 +99,20 @@
   .order__submit {
     width: 100%;
     padding: 9px;
-    background: #FF7020;
+    background-color: #FF7020;
     border-radius: 8px;
     font-weight: 400;
     font-size: 12px;
     line-height: 100%;
     color: #FFFFFF;
     margin-bottom: 8px;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  .order__submit:disabled {
+    opacity: .5;
+    cursor: default;
   }
   
   .order__apeal {
